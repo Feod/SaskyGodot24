@@ -1,7 +1,4 @@
-extends Node
-
-# Import PlayerManager from PlayerManager.gd
-import "res://PlayerManager.gd"
+extends Node2D
 
 # Variable to control the speed of the lerp
 @export var lerp_speed: float = 0.1
