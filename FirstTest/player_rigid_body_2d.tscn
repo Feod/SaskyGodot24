@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://2lwl7fgw8g7b"]
+
+[ext_resource type="Script" path="res://FirstTest/PlayerMovement.gd" id="1_lhbeq"]
+[ext_resource type="Texture2D" uid="uid://bj55bxvo46kkd" path="res://FirstTest/icon.svg" id="2_jiq85"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_to5mw"]
+radius = 61.4003
+
+[node name="Player_RigidBody2D" type="RigidBody2D" node_paths=PackedStringArray("PlayerRigidBody")]
+position = Vector2(429, 147)
+script = ExtResource("1_lhbeq")
+PlayerRigidBody = NodePath(".")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_jiq85")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_to5mw")

@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://flyingbat"]
 
-[ext_resource type="Script" path="res://FlyingBat.gd" id="1_flyingbat"]
+[ext_resource type="Script" path="res://FirstTest/FlyingBat.gd" id="1_flyingbat"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_flyingbat"]
 size = Vector2(50, 50)
