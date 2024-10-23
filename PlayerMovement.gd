@@ -28,4 +28,5 @@ func _process(delta: float) -> void:
 	PlayerRigidBody.apply_central_force(direction * move_speed)
 
 func destroy_player(player: RigidBody2D) -> void:
+	PlayerManager.instance.RemovePlayer(player)
 	player.queue_free()

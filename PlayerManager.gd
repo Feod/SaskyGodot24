@@ -31,3 +31,6 @@ func _process(delta):
 
 func AddPNewPlayer(newplayer):
 	players.push_back(newplayer)
+
+func RemovePlayer(player):
+	players.erase(player)
