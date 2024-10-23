@@ -26,3 +26,6 @@ func _process(delta: float) -> void:
 		direction = direction.normalized()
 	# Apply force to the RigidBody2D
 	PlayerRigidBody.apply_central_force(direction * move_speed)
+
+func destroy_player(player: RigidBody2D) -> void:
+	player.queue_free()
