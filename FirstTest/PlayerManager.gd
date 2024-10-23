@@ -5,6 +5,7 @@ static var instance: PlayerManager
 
 var playersCenter : Vector2
 var players : Array
+@export var player_scene: PackedScene
 
 
 func _init():
@@ -29,6 +30,8 @@ func _process(delta):
 		
 	playersCenter = playersCenter / players.size()
 	
+	if Input.is_action_just_pressed("ui_select"):
+		spawn_player()
 
 func AddPNewPlayer(newplayer):
 	players.push_back(newplayer)
@@ -36,4 +39,8 @@ func AddPNewPlayer(newplayer):
 func RemovePlayer(player):
 	players.erase(player)
 	player.queue_free()
-	
+
+func spawn_player():
+	var new_player = player_scene.instantiate()
+	add_child(new_player)
+	players.push_back(new_player)
