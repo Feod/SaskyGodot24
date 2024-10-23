@@ -23,7 +23,8 @@ func _process(delta):
 	playersCenter = Vector2.ZERO;
 	
 	for player in players:
-		playersCenter += player.global_position
+		if(player != null):
+			playersCenter += player.global_position
 		# print(player)
 		
 	playersCenter = playersCenter / players.size()
@@ -34,3 +35,5 @@ func AddPNewPlayer(newplayer):
 
 func RemovePlayer(player):
 	players.erase(player)
+	player.queue_free()
+	

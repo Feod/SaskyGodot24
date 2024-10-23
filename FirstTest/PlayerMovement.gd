@@ -29,4 +29,3 @@ func _process(delta: float) -> void:
 
 func destroy_player(player: RigidBody2D) -> void:
 	PlayerManager.instance.RemovePlayer(player)
-	player.queue_free()
