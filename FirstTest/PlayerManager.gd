@@ -6,7 +6,7 @@ static var instance: PlayerManager
 var playersCenter : Vector2
 var players : Array
 @export var player_scene: PackedScene
-
+var player_score: int = 0
 
 func _init():
 	instance = self
@@ -44,3 +44,7 @@ func spawn_player():
 	var new_player = player_scene.instantiate()
 	add_child(new_player)
 	players.push_back(new_player)
+
+func _on_coin_collected(body: Node) -> void:
+	if body is RigidBody2D and body.name.begins_with("Player"):
+		player_score += 1

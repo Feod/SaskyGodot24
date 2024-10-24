@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://FirstTest/FlyingBat.gd" id="3_58g8o"]
 [ext_resource type="Script" path="res://FirstTest/FollowPlayersCenter.gd" id="5_vwvoy"]
 [ext_resource type="Script" path="res://FirstTest/DeadlyObject.gd" id="6_4kkum"]
+[ext_resource type="PackedScene" path="res://FirstTest/Coin.tscn" id="7_coin"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_to5mw"]
 radius = 61.4003
@@ -73,3 +74,9 @@ script = ExtResource("6_4kkum")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(404, -53)
 shape = SubResource("RectangleShape2D_spkce")
+
+[node name="Coin1" parent="." instance=ExtResource("7_coin")]
+position = Vector2(500, 500)
+
+[node name="Coin2" parent="." instance=ExtResource("7_coin")]
+position = Vector2(600, 500)
